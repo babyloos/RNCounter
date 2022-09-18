@@ -33,10 +33,10 @@ const App: () => Node = () => {
 
   return (
     <SafeAreaView style={styles.body}>
-      <View style={style=styles.sectionContainer}>
-        <Text>{count}</Text>
+      <View style={styles.sectionContainer}>
+        <Text style={styles.countText}>{count}</Text>
       </View>
-      <View style={[style=styles.sectionContainer, {marginTop: 248}]}>
+      <View style={[styles.sectionContainer, {marginTop: 120}]}>
         <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
           <Text>Count</Text>
         </NeumorphismButton>
@@ -59,7 +59,16 @@ const styles = StyleSheet.create({
     marginTop: 24,
     paddingHorizontal: 0,
     alignItems: 'center',
-  }
+  },
+  countText: {
+    fontFamily: 'Menlo-Bold',
+    fontSize: 96,
+    color: '#70c7ff',
+    flexWrap: 'wrap',
+    padding: 12,
+    shadowColor: '#5293d0',
+    shadowOpacity: 1.0,
+  },
 });
 
 export default App;
