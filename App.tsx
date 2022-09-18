@@ -38,10 +38,10 @@ const App: () => Node = () => {
       </View>
       <View style={[styles.sectionContainer, {marginTop: 120}]}>
         <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
-          <Text>Count</Text>
+          <Text style={styles.buttonText}>Count</Text>
         </NeumorphismButton>
         <NeumorphismButton buttonType={1} size={16} marginTop={48} marginBottom={0} onPress={countReset}>
-          <Text>Reset</Text>
+          <Text style={styles.buttonText}>Reset</Text>
         </NeumorphismButton>
       </View>
     </SafeAreaView>
@@ -68,6 +68,11 @@ const styles = StyleSheet.create({
     padding: 12,
     shadowColor: '#5293d0',
     shadowOpacity: 1.0,
+  },
+  buttonText: {
+    fontFamily: 'Menlo-Bold',
+    color: '#303030',
+    fontSize: 18,
   },
 });
 
