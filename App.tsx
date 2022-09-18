@@ -14,6 +14,7 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity,
 } from 'react-native';
 
 import NeumorphismButton from './src/neumorphism-button';
@@ -21,18 +22,20 @@ import NeumorphismButton from './src/neumorphism-button';
 
 const App: () => Node = () => {
 
-  var count = 0;
+  const [count, setCount] = useState(0);
+
   const countUp = () => {
-    count += 1;
-    console.log(count);
+    setCount((count) => count+1);
   };
   const countReset = () => {
-    count = 0;
-    console.log(count);
+    setCount(0);
   };
 
   return (
     <SafeAreaView style={styles.body}>
+      <View style={style=styles.sectionContainer}>
+        <Text>{count}</Text>
+      </View>
       <View style={[style=styles.sectionContainer, {marginTop: 248}]}>
         <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
           <Text>Count</Text>
