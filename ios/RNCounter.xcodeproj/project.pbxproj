@@ -15,6 +15,7 @@
 		7699B88040F8A987B510C191 /* libPods-RNCounter-RNCounterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNCounter-RNCounterTests.a */; };
 		7B5FE35128D776C200D9659C /* count.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B5FE34F28D776C200D9659C /* count.mp3 */; };
 		7B5FE35228D776C200D9659C /* reset.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B5FE35028D776C200D9659C /* reset.mp3 */; };
+		7B80528E28D869A50089BE40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B80529028D869A50089BE40 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-RNCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5FE34F28D776C200D9659C /* count.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = count.mp3; path = ../src/assets/count.mp3; sourceTree = "<group>"; };
 		7B5FE35028D776C200D9659C /* reset.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = reset.mp3; path = ../src/assets/reset.mp3; sourceTree = "<group>"; };
+		7B80528F28D869A50089BE40 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B80529128D869B10089BE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RNCounter-RNCounterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCounter-RNCounterTests.release.xcconfig"; path = "Target Support Files/Pods-RNCounter-RNCounterTests/Pods-RNCounter-RNCounterTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -117,6 +120,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				7B80529028D869A50089BE40 /* InfoPlist.strings */,
 				7B5FE34F28D776C200D9659C /* count.mp3 */,
 				7B5FE35028D776C200D9659C /* reset.mp3 */,
 				13B07FAE1A68108700A75B9A /* RNCounter */,
@@ -221,6 +225,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -246,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5FE35128D776C200D9659C /* count.mp3 in Resources */,
+				7B80528E28D869A50089BE40 /* InfoPlist.strings in Resources */,
 				7B5FE35228D776C200D9659C /* reset.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -430,6 +436,18 @@
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B80529028D869A50089BE40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B80528F28D869A50089BE40 /* ja */,
+				7B80529128D869B10089BE40 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
