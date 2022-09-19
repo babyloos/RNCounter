@@ -16,7 +16,8 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-
+import { IntlProviderWrapper } from './i18n';
+import { FormattedMessage } from 'react-intl';
 import NeumorphismButton from './src/neumorphism-button';
 
 
@@ -25,26 +26,32 @@ const App: () => Node = () => {
   const [count, setCount] = useState(0);
 
   const countUp = () => {
-    setCount((count) => count+1);
+    setCount((count) => count + 1);
   };
   const countReset = () => {
     setCount(0);
   };
 
   return (
-    <SafeAreaView style={styles.body}>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.countText}>{count}</Text>
-      </View>
-      <View style={[styles.sectionContainer, {marginTop: 120}]}>
-        <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
-          <Text style={styles.buttonText}>カウント</Text>
-        </NeumorphismButton>
-        <NeumorphismButton buttonType={1} size={16} marginTop={48} marginBottom={0} onPress={countReset}>
-          <Text style={styles.buttonText}>リセット</Text>
-        </NeumorphismButton>
-      </View>
-    </SafeAreaView>
+    <IntlProviderWrapper>
+      <SafeAreaView style={styles.body}>
+        <View style={styles.sectionContainer}>
+          <Text style={styles.countText}>{count}</Text>
+        </View>
+        <View style={[styles.sectionContainer, { marginTop: 120 }]}>
+          <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
+            <Text style={styles.buttonText}>
+              <FormattedMessage id={'count'} />
+            </Text>
+          </NeumorphismButton>
+          <NeumorphismButton buttonType={1} size={16} marginTop={48} marginBottom={0} onPress={countReset}>
+            <Text style={styles.buttonText}>
+              <FormattedMessage id={'reset'} />
+            </Text>
+          </NeumorphismButton>
+        </View>
+      </SafeAreaView>
+    </IntlProviderWrapper>
   );
 };
 
