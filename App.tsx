@@ -38,10 +38,10 @@ const App: () => Node = () => {
       </View>
       <View style={[styles.sectionContainer, {marginTop: 120}]}>
         <NeumorphismButton buttonType={0} size={31} marginTop={0} marginBottom={0} onPress={countUp}>
-          <Text style={styles.buttonText}>Count</Text>
+          <Text style={styles.buttonText}>カウント</Text>
         </NeumorphismButton>
         <NeumorphismButton buttonType={1} size={16} marginTop={48} marginBottom={0} onPress={countReset}>
-          <Text style={styles.buttonText}>Reset</Text>
+          <Text style={styles.buttonText}>リセット</Text>
         </NeumorphismButton>
       </View>
     </SafeAreaView>
